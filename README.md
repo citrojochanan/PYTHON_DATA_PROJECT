@@ -5,7 +5,7 @@
 To find the most demanded skills, I filtered and retrieved the top 5 skills for each of the top 3 most popular data roles.
 
 View my notebook with detailed steps here:
-[2_Skill_Demand.ipynb](3_Project\2_Skill_Demand.ipynb)
+[2_Skill_Demand.ipynb](3_Project/2_Skill_Demand.ipynb)
 
 ### Visualize Data
 ```python
@@ -36,7 +36,7 @@ plt.show()
 ```
 
 ### Results
-![Visualization of Top Skills](3_Project\Images\skill_demand_all_data_roles.png)
+![Visualization of Top Skills](3_Project/Images/skill_demand_all_data_roles.png)
 
 ### Insights
 - Python and SQL are the most requested skills overall.
@@ -46,7 +46,7 @@ plt.show()
 
 To find the trends for in-demand skills over time, I filtered job postings by skills required and calculated them as a percentage of all job postings for each month in 2023. I then visualized it with a line plot in Seaborn. 
 
-View my notebook with detailed steps here: [3_Skills_Trend.ipynb](3_Project\3_Skills_Trend.ipynb)
+View my notebook with detailed steps here: [3_Skills_Trend.ipynb](3_Project/3_Skills_Trend.ipynb)
 
 ### Visualize Data
 ```python
@@ -77,7 +77,7 @@ plt.show()
 ```
 
 ### Results
-![Visualization of Skill Trends](3_Project\Images\skill_trends.png)
+![Visualization of Skill Trends](3_Project/Images/skill_trends.png)
 *Line plot visualizing trending top skills for Data Analysts in the US in 2023*
 
 ### Insights
