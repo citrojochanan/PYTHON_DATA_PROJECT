@@ -1,3 +1,48 @@
+# Overview
+Welcome to my data analysis project, where I examine the data job market and visualize key patterns and trends in top-paying jobs and in-demand skills to help find optimal job opportunities for data analysts.
+
+The data is sourced from [Luke Barousse's Python Course](https://www.youtube.com/watch?v=wUSDVGivd-8) which can be found on YouTube. Through a series of Python scripts, I explore key questions such as the most demanded skills, salary trends, and the intersection of demand and salary in data analytics.
+
+# The Questions
+
+Below are the questions I want to answer in my project:
+
+1. What are the most demanded skills in top data roles?
+2. How are in-demand skills trending?
+3. How well do Data Analyst positions pay?
+4. How well does top skills pay?
+5. What are the optimal skills to learn that are both high demand and high paying?
+
+
+# The Tools I Used
+- **Python**: Base language
+    - **Matplotlib**: Data visualisation
+    - **Pandas**: Data cleaning/wrangling
+    - **Seaborn**: Advanced data visualisation
+- **Jupyter Notebooks in Visual Studio Code**: Markdown in conjunction with code
+- **Git and GitHub**: Version control
+
+# Data Preparation and cleanup
+In my Jupyter Notebooks, the following code appears in the first code box everytime: 
+```python
+# Importing Libraries
+import pandas as pd
+from datasets import load_dataset
+import matplotlib.pyplot as plt
+import datetime as dt
+import ast
+import seaborn as sns
+
+# Loading Data
+dataset = load_dataset('lukebarousse/data_jobs')
+df = dataset['train'].to_pandas()
+
+# Data Cleanup
+df['job_posted_date'] = pd.to_datetime(df['job_posted_date'])
+df['job_skills'] = df['job_skills'].apply(lambda x: ast.literal_eval(x) if pd.notna(x) else x)
+```
+This code was used to import the relevant libraries, datasets and clean it up for analysis. 
+
 # The Analysis
 
 ## 1. What are the most demanded skills for the top 3 most popular data roles?
@@ -192,3 +237,13 @@ plt.show()
 ### Insights
 - Python, SQL and Tableau are the most optimal empirically.
 - Programming technologies and analyst tools are more optimal than other technology types.
+
+# What I Learned
+Throughout this project, I uncovered key patterns in the data job market and gained significant understanding in using python for data analysis and visualisation. This includes the following: 
+
+- **Python Libraries**: Through engaging with data at a deeper level than ever, I learnt how to use key libraries and tools such as Pandas to perform data operations more efficiently. I learnt that data cleaning is crucial before any significant insights can be extracted. 
+- **Skill Demand and Market Trends**: There is a clear correlation between salary and demand for data job skills. Advanced and specialized skills such as Python and Oracle often lead to higher salaries. 
+- **Data Analysis**: I learnt how to handle inconsistent data and key considerations in data cleaning and visualisation. I learnt that knowing what to visualise rather than just how to visualise can be key to generating the best insights.
+
+# Conclusion
+This data analysis project has highlighted critical skills and trends that are prevalent in the job market and can be used as a guide for aspiring data analysts for what opportunities they should look for first. Continuous adaptation on job skills are needed as skill demand changes in this field over time. 
